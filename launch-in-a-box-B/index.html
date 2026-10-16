@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<title>Doc Desk · Live Chat</title>
+<meta name="description" content="Doc Desk: a launch tracker and knowledge-ops workspace for Siena Live Chat docs. Case-study prototype with simulated data.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%232e6b4f'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23fff' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<noscript><p style="padding:24px;font:15px/1.5 system-ui">Doc Desk needs JavaScript to run.</p></noscript>
+<div class="app" id="app">
+  <nav class="rail" id="rail" aria-label="Views"></nav>
+  <aside class="tree" id="tree" aria-label="Documents"></aside>
+  <main id="main"></main>
+  <aside class="agent" id="agentpanel" hidden aria-label="Ask agent">
+    <div class="agenthead"><b><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>Ask agent</b><div class="btnrow"><button class="iconbtn" id="agentclear" title="New chat" aria-label="New chat"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></button><button class="iconbtn" id="agentclose" title="Hide" aria-label="Hide agent"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div></div>
+    <div class="convo" id="convo"></div>
+    <div class="askwrap">
+      <form class="askbox" id="askform"><span class="plus" aria-hidden="true">+</span><textarea id="askq" rows="1" placeholder="Ask me anything" aria-label="Question for the agent"></textarea><button class="send" id="askgo" type="submit" aria-label="Ask"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button></form>
+      <p class="agentnote" id="agentnote"></p>
+    </div>
+  </aside>
+</div>
+<div id="modalroot"></div>
+<script src="js/data.js"></script>
+<script src="js/content.js"></script>
+<script src="js/app.js"></script>
+<script src="js/modules.js"></script>
+<script src="js/agent.js"></script>
+<script src="js/tour.js"></script>
+<script src="js/boot.js"></script>
+</body>
+</html>
